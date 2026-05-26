@@ -20,7 +20,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,15 +29,11 @@
 
 <body>
 
-  <!-- LOADER -->
-
   <div class="loader">
 
     <div class="loader-circle"></div>
 
   </div>
-
-  <!-- WHATSAPP -->
 
   <a href="https://wa.me/255743828620"
   class="whatsapp-btn"
@@ -46,8 +42,6 @@
     <i class="fab fa-whatsapp"></i>
 
   </a>
-
-  <!-- NAVBAR -->
 
   <header class="navbar">
 
@@ -78,8 +72,6 @@
     </button>
 
   </header>
-
-  <!-- HERO -->
 
   <section class="hero" id="home">
 
@@ -117,7 +109,7 @@
 
   </section>
 
- </section class="about fade-up" id="about">
+  <section class="about fade-up" id="about">
 
     <div class="about-text">
 
@@ -150,8 +142,6 @@
     </div>
 
   </section>
-
-  <!-- SERVICES -->
 
   <section class="services fade-up" id="services">
 
@@ -221,8 +211,6 @@
     </div>
 
   </section>
-
-  <!-- PORTFOLIO -->
 
   <section class="portfolio" id="portfolio">
 
@@ -300,52 +288,76 @@
 
   </section>
 
-  <!-- CONTACT -->
-
   <section class="contact" id="contact">
-
-    <div class="contact-content">
-
-      <div class="contact-text">
-
-        <p class="section-tag">
-          CONTACT US
-        </p>
-
-        <h2>
-          Let's Build Something Great Together
-        </h2>
-
-        <p>
-
-          Reach out today for graphic design,
-          branding, printing and creative solutions.
-
-        </p>
-
-      </div>
-
-      <form class="contact-form">
-
-        <input type="text" placeholder="Your Name">
-
-        <input type="email" placeholder="Your Email">
-
-        <textarea placeholder="Your Message"></textarea>
-
-        <button type="submit">
-
-          Send Message
-
-        </button>
-
-      </form>
-
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>Let's start working on your next big project</p>
     </div>
-
+  
+    <div class="contact-container">
+      <div class="contact-form-wrapper">
+        <form class="contact-form">
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea placeholder="How can we help you?" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="example@example.com" required>
+          </div>
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+  
+      <div class="contact-info-card">
+        <h3>Get in Touch</h3>
+        <p class="info-desc">
+          Whether you need a quick quote or want to discuss a complex branding project, we are here to help. Reach out through any of the channels below.
+        </p>
+  
+        <div class="info-links-list">
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <span>Call Us</span>
+              <p>+255 743 828 620</p>
+            </div>
+          </div>
+  
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="info-text">
+              <span>WhatsApp</span>
+              <p>+255 743 828 620</p>
+            </div>
+          </div>
+  
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <span>Email</span>
+              <p>mdcreative@gmail.com</p>
+            </div>
+          </div>
+  
+          <div class="info-item">
+            <div class="info-icon-box">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div class="info-text">
+              <span>Location</span>
+              <p>Mateves, Olmoti No. 72,<br>Arusha, Tanzania</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-
-  <!-- FOOTER -->
 
   <footer class="footer">
 
@@ -444,6 +456,8 @@
     </div>
   
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
