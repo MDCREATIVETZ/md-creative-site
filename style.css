@@ -976,60 +976,36 @@ nav a.active::after{
    MOBILE RESPONSIVE
 ========================= */
 
-@media (max-width: 992px){
-
-  .navbar{
-    padding:15px 20px;
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .logo h2{
-    font-size:24px;
-  }
-
-  nav{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-  }
-
-  nav a{
-    margin:0;
-    font-size:15px;
-  }
-
-  .quote-btn{
-    padding:12px 20px;
-    font-size:14px;
-  }
+@media (max-width: 768px){
 
   .hero{
-    min-height:auto;
-    padding:140px 20px 100px;
-    background-position:center;
+    padding: 110px 20px 80px;
+    text-align: left;
+  }
+
+  .hero-content{
+    text-align: left;
   }
 
   .hero h1{
-    font-size:52px;
-    line-height:1.1;
+    font-size: 38px;
+    line-height: 1.2;
   }
 
   .hero-description{
-    font-size:18px;
-    line-height:1.7;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .hero-buttons{
-    flex-direction:column;
-    gap:15px;
-    width:100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .primary-btn,
   .secondary-btn{
-    width:100%;
+    width: 100%;
+  }
     text-align:center;
   }
 
@@ -1088,6 +1064,34 @@ nav a.active::after{
     gap:40px;
   }
 
+}@media (max-width: 768px) {
+
+  .navbar{
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+
+  nav{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  nav.active{
+    display: flex;
+  }
+
+  .menu-toggle{
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 600px){

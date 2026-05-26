@@ -46,4 +46,11 @@ window.addEventListener("scroll", () => {
     navbar.classList.toggle("scrolled", window.scrollY > 50);
   }
 
-});hero.style.backgroundPositionY = window.scrollY * 0.5 + "px";
+});hero.style.backgroundPositionY = window.scrollY * 0.5 + "px";<script>
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script>
