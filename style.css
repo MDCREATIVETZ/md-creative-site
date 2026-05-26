@@ -413,13 +413,29 @@ nav a.active{
 .portfolio-item:hover .portfolio-overlay{
   opacity:1;
 }
-
 /* CONTACT */
 
 .contact {
   padding: 100px 80px;
   background: #ffffff;
   font-family: 'Outfit', sans-serif;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #666;
 }
 
 .contact-container {
@@ -430,6 +446,7 @@ nav a.active{
   margin: 0 auto;
   align-items: start;
 }
+
 
 .contact-form-wrapper {
   background: #ffffff;
@@ -507,7 +524,7 @@ nav a.active{
 .contact-info-card h3 {
   font-size: 32px;
   font-weight: 700;
-  color: rgb(26, 26, 46);
+  color: #1a1a2e;
   margin-bottom: 20px;
 }
 
@@ -556,6 +573,21 @@ nav a.active{
   font-size: 16px;
   margin: 0;
   line-height: 1.4;
+}
+
+/* RESPONSIVE DESIGN FOR CONTACT */
+
+@media(max-width: 992px) {
+  .contact {
+    padding: 60px 20px;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact-header h2 {
+    font-size: 36px;
+  }
 }
 
 /* FOOTER */
