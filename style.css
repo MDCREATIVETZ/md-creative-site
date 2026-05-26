@@ -246,6 +246,11 @@ nav a.active{
   border-radius:24px;
   display:block;
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}.about-container-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
 }
 
 /* MISSION & VISION */
@@ -967,93 +972,159 @@ nav a.active::after{
   }
 }
 
-/* RESPONSIVE & MOBILE (ZOTE ZIMEUNGANISHWA SEHEMU MOJA CHINI ILI ZISIGONGANE) */
+//* =========================
+   MOBILE RESPONSIVE
+========================= */
 
-@media(max-width:992px){
+@media (max-width: 992px){
+
   .navbar{
-    padding:20px;
+    padding:15px 20px;
     flex-direction:column;
     gap:20px;
   }
+
+  .logo h2{
+    font-size:24px;
+  }
+
   nav{
     display:flex;
-    flex-direction:column;
-    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
     gap:15px;
   }
+
+  nav a{
+    margin:0;
+    font-size:15px;
+  }
+
+  .quote-btn{
+    padding:12px 20px;
+    font-size:14px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:140px 20px 100px;
+    background-position:center;
+  }
+
   .hero h1{
     font-size:52px;
+    line-height:1.1;
   }
-  .about{
-    grid-template-columns:1fr;
-    gap: 40px;
-  }
-  .mission-section {
-    grid-column: span 1;
-  }
-  .mission-container {
-    grid-template-columns: 1fr;
-  }
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .footer-container{
-    grid-template-columns:1fr;
-    gap:50px;
-  }
-}
 
-@media(max-width:900px){
-  .hero h1{
-    font-size:54px;
-  }
   .hero-description{
     font-size:18px;
-  }
-  .hero-buttons{
-    flex-direction:column;
-  }
-  .hero-stats{
-    gap:35px;
-  }
-  .portfolio{
-    padding:80px 20px;
-  }
-  .footer{
-    padding:80px 25px 30px;
-  }
-}
-
-@media(max-width:600px){
-  .hero{
-    height:auto;
-    padding:140px 20px;
-  }
-  .hero h1{
-    font-size:42px;
-  }
-  .hero-description{
-    font-size:17px;
     line-height:1.7;
   }
+
+  .hero-buttons{
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+  }
+
   .primary-btn,
   .secondary-btn{
     width:100%;
+    text-align:center;
   }
-  .about,
-  .services,
-  .portfolio,
+
+  .hero-stats{
+    gap:30px;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+    padding:80px 20px;
+  }
+
+  .about-container-wrapper{
+    display:grid;
+    gap:40px;
+  }
+
+  .mission-section{
+    grid-column:span 1;
+  }
+
+  .mission-container{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    padding:80px 20px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio{
+    padding:80px 20px;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
+
   .contact{
     padding:80px 20px;
   }
-  .contact-header h2 {
-    font-size: 36px;
+
+  .contact-container{
+    grid-template-columns:1fr;
   }
+
+  .footer{
+    padding:70px 20px 30px;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-description{
+    font-size:16px;
+  }
+
+  .hero-stat h3{
+    font-size:34px;
+  }
+
+  .about-text h2,
+  .services-header h2,
+  .portfolio-header h2,
+  .contact-header h2{
+    font-size:34px;
+  }
+
+  .portfolio-item{
+    height:300px;
+  }
+
+  .mission-card{
+    padding:35px 25px;
+  }
+
+  .contact-info-card{
+    padding:30px 25px;
+  }
+
+  .footer-logo h2{
+    font-size:24px;
+  }
+
 }
