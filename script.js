@@ -1,19 +1,53 @@
-/* FADE IN ON SCROLL */
-
 const fadeElements = document.querySelectorAll('.fade-up');
 
-window.addEventListener('scroll', () => {
+const observer = new IntersectionObserver((entries)=>{
 
-  fadeElements.forEach((element) => {
+  entries.forEach((entry)=>{
 
-    const position = element.getBoundingClientRect().top;
+    if(entry.isIntersecting){
 
-    const screenPosition = window.innerHeight / 1.2;
+      entry.target.classList.add('show');
 
-    if(position < screenPosition){
-      element.classList.add('show');
     }
 
   });
+
+});
+
+fadeElements.forEach((el)=>{
+  observer.observe(el);
+});const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", ()=>{
+
+  let current = "";
+
+  sections.forEach((section)=>{
+
+    const sectionTop = section.offsetTop;
+
+    if(pageYOffset >= sectionTop - 200){
+      current = section.getAttribute("id");
+    }
+
+  });
+
+  navLinks.forEach((link)=>{
+
+    link.classList.remove("active");
+
+    if(link.getAttribute("href") === "#" + current){
+      link.classList.add("active");
+    }
+
+  });
+
+});window.addEventListener("scroll", ()=>{
+
+  const hero = document.querySelector(".hero");
+
+  hero.style.backgroundPositionY =
+  window.pageYOffset * 0.5 + "px";
 
 });
