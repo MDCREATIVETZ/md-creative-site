@@ -50,4 +50,16 @@ window.addEventListener("scroll", ()=>{
   hero.style.backgroundPositionY =
   window.pageYOffset * 0.5 + "px";
 
+});/* NAVBAR SHADOW ON SCROLL */
+
+window.addEventListener("scroll", ()=>{
+
+  const navbar =
+  document.querySelector(".navbar");
+
+  navbar.classList.toggle(
+    "scrolled",
+    window.scrollY > 50
+  );
+
 });
