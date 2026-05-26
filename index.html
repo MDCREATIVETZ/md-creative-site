@@ -1,169 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>MD Creative Tanzania</title>
+
+  <meta name="description"
+  content="MD Creative Tanzania provides graphic design, branding, printing and creative solutions.">
+
+  <link rel="icon" href="assets/logo.png">
 
   <link rel="stylesheet" href="style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
 
-  <a href="https://wa.me/255743828620" class="whatsapp-btn" target="_blank">
-    💬</a>
+  <!-- LOADER -->
+
+  <div class="loader">
+
+    <div class="loader-circle"></div>
+
+  </div>
+
+  <!-- WHATSAPP -->
+
+  <a href="https://wa.me/255743828620"
+  class="whatsapp-btn"
+  target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+  </a>
+
+  <!-- NAVBAR -->
 
   <header class="navbar">
+
     <div class="logo">
+
       <img src="assets/logo.png" alt="MD Creative Logo">
+
       <h2>MD Creative Tanzania</h2>
+
     </div>
 
     <nav>
-      <a class="active" href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">Services</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact</a>
+
+      <a class="active" href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#services">Services</a>
+
+      <a href="#portfolio">Portfolio</a>
+
+      <a href="#contact">Contact</a>
+
     </nav>
 
-    <button class="quote-btn">Get a Quote</button>
+    <button class="quote-btn">
+      Get a Quote
+    </button>
+
   </header>
 
-  <section class="hero">
-    <div class="overlay"></div>
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
     <div class="hero-content">
-      <p class="small-text">CREATIVE DESIGN • PRINTING • BRANDING</p>
-      <h1>Bringing Your Ideas to Life Through Design and Print</h1>
+
+      <p class="small-text">
+        CREATIVE DESIGN • PRINTING • BRANDING
+      </p>
+
+      <h1>
+        Bringing Your Ideas To Life Through Design & Print
+      </h1>
+
       <p class="hero-description">
-        We create bold visuals, premium prints, and modern branding solutions.
+
+        We create bold visuals, premium prints,
+        and modern branding solutions for businesses,
+        churches, creators, and brands.
+
       </p>
 
       <div class="hero-buttons">
-        <button class="primary-btn">Get a Quote</button>
-        <button class="secondary-btn">Our Services</button>
+
+        <a href="#contact" class="primary-btn">
+          Get Started
+        </a>
+
+        <a href="#services" class="secondary-btn">
+          Our Services
+        </a>
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="about fade-up">
+  <!-- ABOUT -->
+
+  <section class="about fade-up" id="about">
+
     <div class="about-text">
-      <p class="section-tag">ABOUT US</p>
-      <h2>Precision, Quality, and Creativity</h2>
-      <p>
-        At MD Creative Tanzania we deliver graphic design, branding, and printing services.
+
+      <p class="section-tag">
+        ABOUT US
       </p>
-      <a href="#">Learn More →</a>
+
+      <h2>
+        Precision, Quality, and Creativity
+      </h2>
+
+      <p>
+
+        MD Creative Tanzania delivers premium graphic design,
+        branding, printing, and digital creative solutions
+        tailored for modern businesses and organizations.
+
+      </p>
+
+      <a href="#">
+        Learn More →
+      </a>
+
     </div>
 
     <div class="about-image">
-      <img src="assets/print.jpg" alt="">
+
+      <img src="assets/print.jpg" alt="Printing Work">
+
     </div>
+
   </section>
 
-  <section class="services fade-up">
+  <!-- SERVICES -->
+
+  <section class="services fade-up" id="services">
+
     <div class="services-header">
-      <p class="section-tag">OUR SERVICES</p>
-      <h2>Creative Solutions Built For Your Brand</h2>
+
+      <p class="section-tag">
+        OUR SERVICES
+      </p>
+
+      <h2>
+        Creative Solutions Built For Your Brand
+      </h2>
+
     </div>
 
     <div class="services-grid">
 
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
-        <h3>Graphic Design</h3>
-        <p>Logos, posters, flyers, social media designs.</p>
+
+        <div class="service-icon">
+          <i class="fas fa-pen-nib"></i>
+        </div>
+
+        <h3>
+          Graphic Design
+        </h3>
+
+        <p>
+          Logos, posters, flyers, social media graphics and modern visual branding.
+        </p>
+
       </div>
 
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-print"></i></div>
-        <h3>Printing Services</h3>
-        <p>Banners, business cards, brochures, merchandise.</p>
+
+        <div class="service-icon">
+          <i class="fas fa-print"></i>
+        </div>
+
+        <h3>
+          Printing Services
+        </h3>
+
+        <p>
+          Banners, brochures, business cards,
+          stickers and premium print materials.
+        </p>
+
       </div>
 
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-        <h3>Brand Identity</h3>
-        <p>Modern and professional visual identities.</p>
+
+        <div class="service-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+
+        <h3>
+          Brand Identity
+        </h3>
+
+        <p>
+          Professional visual systems that build strong and recognizable brands.
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
-  <section class="portfolio">
+  <!-- PORTFOLIO -->
+
+  <section class="portfolio" id="portfolio">
+
     <div class="portfolio-header">
-      <p class="section-tag">OUR PORTFOLIO</p>
-      <h2>Some Of Our Recent Creative Work</h2>
+
+      <p class="section-tag">
+        OUR PORTFOLIO
+      </p>
+
+      <h2>
+        Some Of Our Recent Creative Work
+      </h2>
+
     </div>
 
     <div class="portfolio-grid">
 
       <div class="portfolio-item">
-        <img src="assets/work1.jpg" alt="">
-        <div class="portfolio-overlay"><h3>Brand Design</h3></div>
+
+        <img src="assets/work1.jpg" alt="Brand Design">
+
+        <div class="portfolio-overlay">
+
+          <h3>
+            Brand Design
+          </h3>
+
+        </div>
+
       </div>
 
       <div class="portfolio-item">
-        <img src="assets/work2.jpg" alt="">
-        <div class="portfolio-overlay"><h3>Printing Work</h3></div>
+
+        <img src="assets/work2.jpg" alt="Printing Work">
+
+        <div class="portfolio-overlay">
+
+          <h3>
+            Printing Work
+          </h3>
+
+        </div>
+
       </div>
 
       <div class="portfolio-item">
-        <img src="assets/work3.jpg" alt="">
-        <div class="portfolio-overlay"><h3>Social Media Design</h3></div>
+
+        <img src="assets/work3.jpg" alt="Social Media Design">
+
+        <div class="portfolio-overlay">
+
+          <h3>
+            Social Media Design
+          </h3>
+
+        </div>
+
       </div>
 
       <div class="portfolio-item">
-        <img src="assets/work4.jpg" alt="">
-        <div class="portfolio-overlay"><h3>Banner Design</h3></div>
+
+        <img src="assets/work4.jpg" alt="Banner Design">
+
+        <div class="portfolio-overlay">
+
+          <h3>
+            Banner Design
+          </h3>
+
+        </div>
+
       </div>
 
     </div>
+
   </section>
 
-  <section class="contact">
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
     <div class="contact-content">
 
       <div class="contact-text">
-        <p class="section-tag">CONTACT US</p>
-        <h2>Let's Build Something Great Together</h2>
-        <p>Reach out for design, branding, and printing services.</p>
+
+        <p class="section-tag">
+          CONTACT US
+        </p>
+
+        <h2>
+          Let's Build Something Great Together
+        </h2>
+
+        <p>
+
+          Reach out today for graphic design,
+          branding, printing and creative solutions.
+
+        </p>
+
       </div>
 
       <form class="contact-form">
+
         <input type="text" placeholder="Your Name">
+
         <input type="email" placeholder="Your Email">
+
         <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+
+        <button type="submit">
+
+          Send Message
+
+        </button>
+
       </form>
 
     </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer class="footer">
+
     <div class="footer-content">
-      <h2>MD Creative Tanzania</h2>
-      <p>WE BELIEVE IN EXCELLENCE</p>
+
+      <img src="assets/logo.png"
+      alt="Logo"
+      width="70">
+
+      <h2>
+        MD Creative Tanzania
+      </h2>
+
+      <p>
+        WE BELIEVE IN EXCELLENCE
+      </p>
 
       <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#portfolio">Portfolio</a>
+
+        <a href="#contact">Contact</a>
+
       </div>
 
       <p class="copyright">
-        © 2026 MD Creative Tanzania. All rights reserved.
+
+        © 2026 MD Creative Tanzania.
+        All rights reserved.
+
       </p>
+
     </div>
+
   </footer>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
