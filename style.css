@@ -975,11 +975,70 @@ nav a.active::after{
 //* =========================
    MOBILE RESPONSIVE
 ========================= */
+@media (max-width: 768px) {
 
-@media (max-width: 768px){
+  /* GLOBAL RESET FOR MOBILE */
+  section{
+    padding: 70px 18px;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /* ================= NAVBAR ================= */
+
+  .navbar{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 18px;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo h2{
+    font-size: 18px;
+  }
+
+  nav{
+    position: absolute;
+    top: 70px;
+    right: 18px;
+    background: #ffffff;
+    width: 220px;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  nav.active{
+    display: flex;
+  }
+
+  nav a{
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .quote-btn{
+    display: none;
+  }
+
+  .menu-toggle{
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: #5a2ca0;
+  }
+
+  /* ================= HERO ================= */
 
   .hero{
-    padding: 110px 20px 80px;
+    min-height: auto;
+    padding: 120px 18px 80px;
     text-align: left;
   }
 
@@ -987,8 +1046,13 @@ nav a.active::after{
     text-align: left;
   }
 
+  .small-text{
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
   .hero h1{
-    font-size: 38px;
+    font-size: 34px;
     line-height: 1.2;
   }
 
@@ -999,136 +1063,123 @@ nav a.active::after{
 
   .hero-buttons{
     flex-direction: column;
-    align-items: stretch;
+    gap: 12px;
   }
 
   .primary-btn,
   .secondary-btn{
     width: 100%;
+    text-align: center;
   }
-    text-align:center;
-  }
+
+  /* ================= STATS ================= */
 
   .hero-stats{
-    gap:30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 25px;
   }
 
-  .about{
-    grid-template-columns:1fr;
-    padding:80px 20px;
-  }
-
-  .about-container-wrapper{
-    display:grid;
-    gap:40px;
-  }
-
-  .mission-section{
-    grid-column:span 1;
-  }
-
-  .mission-container{
-    grid-template-columns:1fr;
-  }
-
-  .services{
-    padding:80px 20px;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .portfolio{
-    padding:80px 20px;
-  }
-
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact{
-    padding:80px 20px;
-  }
-
-  .contact-container{
-    grid-template-columns:1fr;
-  }
-
-  .footer{
-    padding:70px 20px 30px;
-  }
-
-  .footer-container{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-}@media (max-width: 768px) {
-
-  .navbar{
-    flex-direction: row;
-    padding: 15px 20px;
-  }
-
-  nav{
-    display: none;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: white;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  nav.active{
-    display: flex;
-  }
-
-  .menu-toggle{
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 600px){
-
-  .hero h1{
-    font-size:40px;
-  }
-
-  .hero-description{
-    font-size:16px;
+  .hero-stat{
+    background: rgba(255,255,255,0.08);
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center;
   }
 
   .hero-stat h3{
-    font-size:34px;
+    font-size: 26px;
   }
 
-  .about-text h2,
-  .services-header h2,
-  .portfolio-header h2,
-  .contact-header h2{
-    font-size:34px;
+  /* ================= ABOUT ================= */
+
+  .about{
+    grid-template-columns: 1fr;
+    padding: 70px 18px;
+    gap: 30px;
   }
 
-  .portfolio-item{
-    height:300px;
+  .about-text h2{
+    font-size: 30px;
+  }
+
+  .about-text p{
+    font-size: 15px;
+  }
+
+  .mission-container{
+    grid-template-columns: 1fr;
   }
 
   .mission-card{
-    padding:35px 25px;
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .mission-card h3{
+    font-size: 22px;
+  }
+
+  /* ================= SERVICES ================= */
+
+  .services-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card{
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  /* ================= PORTFOLIO ================= */
+
+  .portfolio-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .portfolio-item{
+    height: 260px;
+    border-radius: 18px;
+  }
+
+  .portfolio-overlay h3{
+    font-size: 20px;
+  }
+
+  /* ================= CONTACT ================= */
+
+  .contact-container{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .contact-header h2{
+    font-size: 28px;
   }
 
   .contact-info-card{
-    padding:30px 25px;
+    padding: 24px;
+  }
+
+  .form-group label{
+    font-size: 18px;
+  }
+
+  /* ================= FOOTER ================= */
+
+  .footer-container{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer{
+    padding: 60px 18px 30px;
   }
 
   .footer-logo h2{
-    font-size:24px;
+    font-size: 20px;
   }
-
 }
