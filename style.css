@@ -353,27 +353,53 @@ nav a.active{
   background:#4b0082;
 }
 
-/* FOOTER */
+//* FOOTER */
 
 .footer{
-  background:#160024;
-  color:white;
-  padding:80px;
-  text-align:center;
+  background:#140020;
+  color:purple;
+  padding:90px 80px 30px;
+  position:relative;
 }
 
-.footer-content{
+.footer-container{
+  display:grid;
+  grid-template-columns:2fr 1fr 1.5fr;
+  gap:60px;
+  padding-bottom:50px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo{
   display:flex;
-  flex-direction:column;
   align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.footer-logo img{
+  width:55px;
+}
+
+.footer-logo h2{
+  font-size:30px;
+}
+
+.footer-box p{
+  color:#d6d6d6;
+  line-height:1.9;
+}
+
+.footer-box h3{
+  color:gold;
+  margin-bottom:25px;
+  font-size:24px;
 }
 
 .footer-links{
-  margin:30px 0;
   display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  gap:18px;
 }
 
 .footer-links a{
@@ -384,13 +410,75 @@ nav a.active{
 
 .footer-links a:hover{
   color:gold;
+  transform:translateX(5px);
 }
 
-.copyright{
-  margin-top:30px;
-  font-size:14px;
-  color:#aaa;
+.footer-contact{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
 }
+
+.footer-contact p{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+}
+
+.footer-contact i{
+  color:gold;
+  margin-top:5px;
+}
+
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:30px;
+}
+
+.social-icons a{
+  width:42px;
+  height:42px;
+  background:rgba(255,255,255,0.08);
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#5a2ca0;
+  transform:translateY(-5px);
+}
+
+.footer-bottom{
+  text-align:center;
+  padding-top:30px;
+}
+
+.footer-bottom p{
+  color:#aaa;
+  font-size:14px;
+}
+
+/* FOOTER RESPONSIVE */
+
+@media(max-width:900px){
+
+  .footer{
+    padding:80px 25px 30px;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+}
+
 
 /* WHATSAPP BUTTON */
 
