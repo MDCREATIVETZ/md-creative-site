@@ -21,19 +21,26 @@
       <img src="assets/logo.png" alt="MD Creative Logo">
       <h2>MD Creative Tanzania</h2>
     </div>
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-quote-link">Get a Quote</a>
     </nav>
     <button class="quote-btn" onclick="location.href='#contact'">Get a Quote</button>
   </header>
 
   <section id="home" class="hero">
+    <div class="hero-bg"></div>
     <div class="hero-gradient"></div>
-    <div class="hero-content">
+    <div class="hero-content parallax-content">
       <span class="small-text">CREATIVE DESIGN • PRINTING • BRANDING</span>
       <h1>Bringing Your Ideas To Life Through Design & Print</h1>
       <p class="hero-description">
@@ -78,7 +85,7 @@
       </p>
       <a href="#contact" class="primary-btn">Learn More →</a>
     </div>
-    <div class="about-image">
+    <div class="about-image parallax-item">
       <img src="assets/hero.jpg" alt="MD Creative Workshop">
     </div>
 
