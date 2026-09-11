@@ -1,238 +1,78 @@
-/* FADE UP ANIMATION */
+const fadeElements = document.querySelectorAll('.fade-up');
 
-const fadeElements =
-document.querySelectorAll(".fade-up");
-
-function revealFadeElements(){
-
-  fadeElements.forEach((element)=>{
-
-    const windowHeight =
-    window.innerHeight;
-
-    const elementTop =
-    element.getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - 100){
-
-      element.classList.add("show");
-
+function revealFadeElements() {
+  fadeElements.forEach((element) => {
+    if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+      element.classList.add('show');
     }
-
   });
-
 }
 
-window.addEventListener(
-  "scroll",
-  revealFadeElements
-);
+const navbar = document.querySelector('.navbar');
+const hero = document.querySelector('.hero');
+const heroBg = document.querySelector('.hero-bg');
+const heroContent = document.querySelector('.hero-content');
+const parallaxItems = document.querySelectorAll('.parallax-item');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-revealFadeElements();
-
-/* ACTIVE NAVIGATION */
-
-const sections =
-document.querySelectorAll("section");
-
-const navLinks =
-document.querySelectorAll(".nav-links a");
-
-const navbar =
-document.querySelector(".navbar");
-
-const hero =
-document.querySelector(".hero");
-
-const heroBg =
-document.querySelector(".hero-bg");
-
-const heroContent =
-document.querySelector(".hero-content");
-
-const parallaxItems =
-document.querySelectorAll(".parallax-item");
-
-const prefersReducedMotion =
-window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function applyParallax(){
-
-  if(prefersReducedMotion){
-    return;
+function applyParallax() {
+  if (prefersReducedMotion) return;
+  const scrollY = window.scrollY;
+  if (hero && heroBg && heroContent && scrollY <= hero.offsetHeight) {
+    heroBg.style.transform = `translate3d(0, ${scrollY * 0.45}px, 0) scale(1.1)`;
+    heroContent.style.transform = `translate3d(0, ${scrollY * 0.18}px, 0)`;
+    heroContent.style.opacity = String(Math.max(0, 1 - scrollY / (hero.offsetHeight * 1.2)));
   }
-
-  const scrollY =
-  window.scrollY;
-
-  if(hero && heroBg && heroContent){
-
-    const heroHeight =
-    hero.offsetHeight;
-
-    if(scrollY <= heroHeight){
-
-      heroBg.style.transform =
-      `translate3d(0, ${scrollY * 0.45}px, 0) scale(1.1)`;
-
-      heroContent.style.transform =
-      `translate3d(0, ${scrollY * 0.18}px, 0)`;
-
-      heroContent.style.opacity =
-      String(Math.max(0, 1 - scrollY / (heroHeight * 1.2)));
-
-    }else{
-
-      heroBg.style.transform = "";
-      heroContent.style.transform = "";
-      heroContent.style.opacity = "";
-
+  parallaxItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const offset = (rect.top - window.innerHeight * 0.5) * 0.08;
+      item.style.transform = `translate3d(0, ${offset}px, 0)`;
     }
-
-  }
-
-  parallaxItems.forEach((item)=>{
-
-    const rect =
-    item.getBoundingClientRect();
-
-    const windowHeight =
-    window.innerHeight;
-
-    if(rect.top < windowHeight && rect.bottom > 0){
-
-      const speed =
-      parseFloat(item.dataset.parallaxSpeed) || 0.12;
-
-      const offset =
-      (rect.top - windowHeight * 0.5) * speed;
-
-      item.style.transform =
-      `translate3d(0, ${offset}px, 0)`;
-
-    }
-
   });
-
 }
 
-window.addEventListener("scroll", ()=>{
-
-  let current = "";
-
-  sections.forEach((section)=>{
-
-    const sectionTop =
-    section.offsetTop;
-
-    if(window.scrollY >= sectionTop - 200){
-
-      current =
-      section.getAttribute("id");
-
-    }
-
-  });
-
-  navLinks.forEach((link)=>{
-
-    link.classList.remove("active");
-
-    if(
-      link.getAttribute("href")
-      === "#" + current
-    ){
-
-      link.classList.add("active");
-
-    }
-
-  });
-
-  /* NAVBAR EFFECT */
-
-  if(navbar){
-
-    if(window.scrollY > 50){
-
-      navbar.classList.add("scrolled");
-
-    }else{
-
-      navbar.classList.remove("scrolled");
-
-    }
-
-  }
-
+function handleScroll() {
+  navbar?.classList.toggle('scrolled', window.scrollY > 50);
+  revealFadeElements();
   applyParallax();
-
-});
-
-applyParallax();
-
-/* MOBILE MENU */
-
-const toggle =
-document.querySelector(".menu-toggle");
-
-const nav =
-document.querySelector(".nav-links");
-
-function closeMobileMenu(){
-
-  if(nav){
-    nav.classList.remove("active");
-  }
-
-  if(toggle){
-    toggle.classList.remove("active");
-    toggle.setAttribute("aria-expanded", "false");
-  }
-
 }
 
-if(toggle && nav){
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll();
 
-  toggle.addEventListener("click", (e)=>{
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
 
-    e.stopPropagation();
-
-    const isOpen =
-    nav.classList.toggle("active");
-
-    toggle.classList.toggle("active", isOpen);
-    toggle.setAttribute(
-      "aria-expanded",
-      isOpen ? "true" : "false"
-    );
-
-  });
-
+function closeMobileMenu() {
+  nav?.classList.remove('active');
+  toggle?.classList.remove('active');
+  toggle?.setAttribute('aria-expanded', 'false');
 }
 
-/* CLOSE MOBILE MENU */
-
-navLinks.forEach((link)=>{
-
-  link.addEventListener("click", closeMobileMenu);
-
+toggle?.addEventListener('click', (event) => {
+  event.stopPropagation();
+  const isOpen = nav.classList.toggle('active');
+  toggle.classList.toggle('active', isOpen);
+  toggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-/* CLOSE MENU WHEN CLICK OUTSIDE */
+document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', closeMobileMenu));
+document.addEventListener('click', (event) => {
+  if (nav?.classList.contains('active') && !nav.contains(event.target) && !toggle.contains(event.target)) closeMobileMenu();
+});
 
-document.addEventListener("click",(e)=>{
-
-  if(
-    nav &&
-    toggle &&
-    nav.classList.contains("active") &&
-    !nav.contains(e.target) &&
-    !toggle.contains(e.target)
-  ){
-
-    closeMobileMenu();
-
-  }
-
+const quoteForm = document.querySelector('#quote-form');
+quoteForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = new FormData(quoteForm);
+  const text = [
+    'Hello MD Creative Tanzania, I would like a quotation.',
+    `Name: ${data.get('name')}`,
+    `Phone: ${data.get('phone')}`,
+    `Email: ${data.get('email')}`,
+    `Service: ${data.get('service')}`,
+    `Project details: ${data.get('message')}`
+  ].join('\n');
+  window.open(`https://wa.me/255743828620?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
 });
